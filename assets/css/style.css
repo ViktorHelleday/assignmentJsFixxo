@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --color-white: #FFFFFF;
+    --color-theme: #FF7373;
+    --color-dark: #222529;
+    --color-shadow: rgba(0, 0, 0, 0.10); 
+    --linear-gradient-dark: #E6E6E6;
+    --linear-gradient-light: #F5F5F5;
+
+    --max-width: 1680px;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+
+}
+
+/* a-länkar som eventuellt kan tas bort denna del? */
+
+a {
+    color: var(--color-dark);
+    text-decoration: none;
+}
+
+    a:hover {
+        color: var(--color-theme);
+        transition: 0.2s ease-in-out;
+    }
+
+
+
+
+.__gradient-gray {
+    background: rgb(230,230,230);
+    background: linear-gradient(90deg, var(--linear-gradient-dark) 0%, var(--linear-gradient-light) 100%);
+    
+}
+
+
+
+
+/* Logotype top */
+
+.__logo {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.bg-theme {
+    background-color: var(--color-theme);
+}
+
+
+
+
+
+/* Navbar mitten top */
+
+.__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+
+    .__navbar .__nav-links {
+        font-weight: 500;
+
+    }
+
+        .__navbar .__nav-links a {
+            color: var(--color-dark);
+            font-weight: 500;
+            text-decoration: none;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+            .__navbar .__nav-links a:hover {
+                color: var(--color-theme);
+                text-decoration: none;
+                transition: 0.2s ease-in-out;
+            }
+
+            .__navbar .__nav-links a:active,
+            .__navbar .__nav-links .__active {
+                color: var(--color-theme);
+                text-decoration: none;
+            }
+
+    .__navbar .__nav-icon-links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+        .__navbar .__nav-icon-links a {
+            color: var(--color-dark);
+            background-color: var(--color-white);
+            width: 36px;
+            height: 36px;
+            margin-left: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px 4px var(--color-shadow);
+            position: relative;
+        }
+
+            .__navbar .__nav-icon-links a:hover {
+                color: var(--color-theme);
+                transition: 0.2s ease-in-out;
+                text-decoration: none;
+            }
+
+
+
+
+
+/* Nav-icons höger top */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: var(--max-width);
+    }
+}
+
+
+    
