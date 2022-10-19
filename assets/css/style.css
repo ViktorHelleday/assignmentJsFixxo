@@ -15,13 +15,11 @@ html, body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    margin: 0;
-
 }
 
 /* a-länkar som eventuellt kan tas bort denna del? */
 
-a {
+/* a {
     color: var(--color-dark);
     text-decoration: none;
 }
@@ -30,7 +28,7 @@ a {
         color: var(--color-theme);
         transition: 0.2s ease-in-out;
     }
-
+*/
 
 
 
@@ -54,8 +52,49 @@ a {
     background-color: var(--color-theme);
 }
 
+.__btn-theme {
+    position: relative;
+    text-align: center;
+    background-color: var(--color-theme);
+    color: var(--color-white);
+    padding: 25px 50px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+    .__btn-theme:hover {
+        color: var(--color-white);
+        background-color: var(--color-dark);
+        text-decoration: none;
+    }
+
+    .__btn-theme .__btn-theme-left,
+    .__btn-theme .__btn-theme-right {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+    }
+
+    .__btn-theme .__btn-theme-left {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        border-left: 2px solid var(--color-white);
+        border-top: 2px solid var(--color-white);
+    }
+
+    .__btn-theme .__btn-theme-right {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        border-right: 2px solid var(--color-white);
+        border-bottom: 2px solid var(--color-white);
+    }
 
 
+header {
+    margin-bottom: 135px;
+}
 
 
 /* Navbar mitten top */
@@ -112,6 +151,7 @@ a {
             align-items: center;
             box-shadow: 0 0 10px 4px var(--color-shadow);
             position: relative;
+            text-decoration: none;
         }
 
             .__navbar .__nav-icon-links a:hover {
@@ -124,12 +164,38 @@ a {
 
 
 
-/* Nav-icons höger top */ 
+/* SHOWCASE */ 
 
+.__showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+    .__showcase .__img-left {
+        margin-left: -120px;
+    }
 
+    .__showcase .__img-right {
+        margin-right: -120px;
+    }
 
+    .__showcase .__showcase-body {
+        text-align: center;
+    }
 
+        .__showcase .__showcase-body h1 {
+            font-size: 65px;
+            font-weight: 800;
+        }
+
+        .__showcase .__showcase-body p {
+            margin-top: 30px;
+            margin-bottom: 70px;
+            font-size: 20px;
+        }
+
+/* FEATURED PRODUCTS */ 
 
 
 
