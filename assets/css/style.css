@@ -3,8 +3,10 @@
 :root {
     --color-white: #FFFFFF;
     --color-theme: #FF7373;
+    --color-extralightgray: #F8F8F8;
     --color-dark: #222529;
     --color-gray: #BBBBBB;
+    --color-lightgray: #70707066;
     --color-darkgray: #616365;
     --color-shadow: rgba(0, 0, 0, 0.10); 
     --linear-gradient-dark: #E6E6E6;
@@ -21,7 +23,7 @@ html, body {
 
 /* a-länkar som eventuellt kan tas bort denna del? */
 
-/* a {
+ a {
     color: var(--color-dark);
     text-decoration: none;
 }
@@ -30,7 +32,7 @@ html, body {
         color: var(--color-theme);
         transition: 0.2s ease-in-out;
     }
-*/
+
 
 
 
@@ -302,7 +304,18 @@ header {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-bottom: 60px;
+    justify-content: space-between;
 }
+
+    .__flashsale-right .card {
+        align-items: center;
+    }
+
+    .__flashsale-left .card {
+        align-items: center;
+        
+        
+    }
 
 .__flashsale-box {
     background-color: var(--color-gray);
@@ -310,6 +323,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .__flashsale-title {
@@ -342,12 +356,167 @@ header {
     }
 
 
+/* CONTACTS-PAGE */
 
+.breadcrumb .container {
+    max-width: 1110px;
+}
 
+    .breadcrumb .breadcrumb-list {
+        list-style: none;
+        margin: 60px 0 40px 0;
+        padding: 0;
+        
+    }
 
+        .breadcrumb .breadcrumb-list li {
+            display: inline-block;
+            font-weight: 500;
+            color: var(--color-theme);
+        }
 
+            .breadcrumb .breadcrumb-list li + li::before {
+                content: "/\00a0";
+                font-weight: 400;
+                color: var(--color-dark);
+            }
 
+            .breadcrumb .breadcrumb-list li a {
+                color: var(--color-dark);
+            }
 
+                .breadcrumb .breadcrumb-list li a:hover {
+                    color: var(--color-theme);
+                    text-decoration: none;
+                }
+
+/* Map */
+
+.map {
+    margin-bottom: 70px;
+}
+
+    .map .google-map {
+        width: 100%;
+        height: 400px;
+        border: none;
+    }
+
+/* Contact-form */ 
+
+.contact-form {
+    margin-bottom: 60px;
+    
+}
+
+    .contact-form .container {
+        max-width: 1110px;
+    }
+
+    .contact-form h2 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .contact-form form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+        .contact-form form input {
+            width: 100%;
+            padding: 18px 20px;
+            border: 1px solid var(--color-lightgray);
+        }
+
+        .contact-form form .textarea {
+            grid-column: 1 / -1;
+        }
+
+        .contact-form form textarea {
+            width: 100%;
+            padding: 18px 20px;
+            border: 1px solid var(--color-lightgray);
+            height: 140px;
+            resize: none;
+        }
+
+        .contact-form form .error {
+            color: var(--color-theme);
+            border: 1px solid var(--color-theme);
+        }
+
+        .contact-form form .errorMessage {
+            margin-top: 5px;
+            color: var(--color-theme);
+            font-size: 0.8em;
+        }
+
+.btn-theme {
+    position: relative;
+    background-color: var(--color-theme);
+    color: var(--color-white);
+    border: none;
+    padding: 20px 50px;
+    transition: all 0.2s ease-in-out;
+    font-weight: 600;
+}
+
+    .btn-theme:hover {
+        color: var(--color-white);
+        background-color: var(--color-dark);
+        text-decoration: none;
+    }
+
+    .btn-theme .corner-topLeft {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        top: 10px;
+        left: 10px;
+        border-left: 2px solid var(--color-white);
+        border-top: 2px solid var(--color-white);
+    }
+
+    .btn-theme .corner-bottomRight {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        bottom: 10px;
+        right: 10px;
+        border-right: 2px solid var(--color-white);
+        border-bottom: 2px solid var(--color-white);
+    }
+
+/* FOOTER */ 
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-extralightgray);
+    padding: 35px;
+}
+
+footer .socialmedia {
+    margin-bottom: 25px;
+}
+
+    footer .socialmedia a {
+        font-size: 25px;
+        color: var(--color-dark);
+        text-decoration: none;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+        footer .socialmedia a:hover {
+            color: var(--color-theme);
+            text-decoration: none;
+        }
 
 
 
